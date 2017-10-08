@@ -1,5 +1,5 @@
 <tpc-layout>
-  <tpc-sidenav [open]="navState">
+  <tpc-sidenav [open]="navState$ | async">
       <tpc-nav-item (navigate)="closeSidenav()" routerLink="/" icon="home" hint="Homepage">
         Home
       </tpc-nav-item>

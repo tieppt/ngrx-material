@@ -1,4 +1,9 @@
 import { Component } from '@angular/core';
+import { Store } from '@ngrx/store';
+import { Observable } from 'rxjs/Observable';
+
+import * as fromRoot from '@app/store/reducers';
+import * as layout from '@app/core/store/actions/layout';
 
 @Component({
   selector: 'tpc-root',
@@ -6,16 +11,21 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  navState: boolean = false;
+  navState$: Observable<boolean>;
+
+  constructor(private store: Store<fromRoot.State>) {
+    this.navState$ = store.select(fromRoot.getShowSidenav);
+  }
+
   closeSidenav() {
-    this.navState = false;
+    this.store.dispatch(new layout.CloseSidenav());
   }
 
   openMenu() {
-    this.navState = true;
+    this.store.dispatch(new layout.OpenSidenav());
   }
 
   toggleMenu() {
-    this.navState = !this.navState;
+    this.store.dispatch(new layout.ToggleSidenav());
   }
 }
