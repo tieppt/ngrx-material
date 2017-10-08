@@ -7,12 +7,16 @@ import { CoreRoutingModule } from './core-routing.module';
 import { LayoutComponent } from './components/layout.component';
 import { SidenavComponent } from './components/sidenav.component';
 import { NavItemComponent } from './components/nav-item.component';
+import { HomeComponent } from './containers/home.component';
+import { NotFoundComponent } from './containers/not-found.component';
 
 export const components = [
   AppComponent,
   LayoutComponent,
   SidenavComponent,
-  NavItemComponent
+  NavItemComponent,
+  HomeComponent,
+  NotFoundComponent
 ];
 
 @NgModule({
@@ -23,7 +27,7 @@ export const components = [
     CoreRoutingModule
   ],
   declarations: [
-    ...components,
+    ...components
   ],
   exports: [
     ...components

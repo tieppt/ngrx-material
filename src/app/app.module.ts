@@ -20,7 +20,7 @@ import { EffectsModule } from '@ngrx/effects';
     environment.production ? [] : StoreDevtoolsModule.instrument(),
     EffectsModule.forRoot([]),
     AppRoutingModule
-],
+  ],
   providers: [],
   bootstrap: [AppComponent]
 })
