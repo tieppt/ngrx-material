@@ -6,7 +6,7 @@ import * as fromRoot from '@app/store/reducers';
 import * as layout from '@app/core/store/actions/layout';
 
 @Component({
-  selector: 'tpc-root',
+  selector: 'ptt-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })

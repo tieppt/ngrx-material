@@ -1,7 +1,14 @@
-import { Component, OnInit, Input, Output, EventEmitter, ViewEncapsulation } from '@angular/core';
+import {
+  Component,
+  OnInit,
+  Input,
+  Output,
+  EventEmitter,
+  ViewEncapsulation
+} from '@angular/core';
 
 @Component({
-  selector: 'tpc-nav-item',
+  selector: 'ptt-nav-item',
   template: `
   <a mat-list-item [routerLink]="routerLink" (click)="navigate.emit()">
     <mat-icon mat-list-icon>{{ icon }}</mat-icon>
@@ -13,7 +20,7 @@ import { Component, OnInit, Input, Output, EventEmitter, ViewEncapsulation } fro
   `,
   styles: [
     `
-    tpc-nav-item {
+    ptt-nav-item {
       display: block;
     }
     `
@@ -25,9 +32,7 @@ export class NavItemComponent implements OnInit {
   @Input() hint = '';
   @Input() routerLink: string | any[] = '/';
   @Output() navigate = new EventEmitter();
-  constructor() { }
+  constructor() {}
 
-  ngOnInit() {
-  }
-
+  ngOnInit() {}
 }

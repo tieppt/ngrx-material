@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'tpc-layout',
+  selector: 'ptt-layout',
   template: `
   <mat-sidenav-container fullscreen>
     <ng-content></ng-content>
@@ -16,10 +16,7 @@ import { Component, OnInit } from '@angular/core';
   ]
 })
 export class LayoutComponent implements OnInit {
+  constructor() {}
 
-  constructor() { }
-
-  ngOnInit() {
-  }
-
+  ngOnInit() {}
 }

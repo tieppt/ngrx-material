@@ -1,9 +1,9 @@
-<tpc-layout>
-  <tpc-sidenav [open]="navState$ | async">
-      <tpc-nav-item (navigate)="closeSidenav()" routerLink="/" icon="home" hint="Homepage">
-        Home
-      </tpc-nav-item>
-  </tpc-sidenav>
+<ptt-layout>
+  <ptt-sidenav [open]="navState$ | async">
+    <ptt-nav-item (navigate)="closeSidenav()" routerLink="/" icon="home" hint="Homepage">
+      Home
+    </ptt-nav-item>
+  </ptt-sidenav>
   <mat-toolbar color="primary">
     <div class="container-flex">
       <h1 class="logo">Ngrx Application</h1>
@@ -14,4 +14,4 @@
   </mat-toolbar>
 
   <router-outlet></router-outlet>
-</tpc-layout>
+</ptt-layout>
